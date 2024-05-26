@@ -1,0 +1,83 @@
+.contenedor {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000033; /* Color de fondo marino oscuro */
+  opacity: 0.7; /* Opacidad */
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff; /* Color del texto */
+}
+
+.reloj {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.reloj-abatible {
+  position: relative;
+  width: 50px;
+  height: 70px;
+  perspective: 1000px;
+  margin: 0 5px;
+}
+
+.tarjeta-abatible {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  transition: transform 0.6s;
+}
+
+.tarjeta-abatible.abatimiento {
+  transform: rotateX(-180deg);
+}
+
+.tarjeta-frontal, .tarjeta-trasera {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+.tarjeta-trasera {
+  transform: rotateX(180deg);
+}
+
+.grupo-formulario {
+  margin-top: 20px;
+}
+
+.control-formulario {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
